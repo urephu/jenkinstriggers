@@ -3,18 +3,10 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                // 
+                sh "Deploying Artifact" 
             }
         }
-        stage('Test') { 
-            steps {
-                // 
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                // 
-            }
-        }
+      
+       
     }
 }
