@@ -10,13 +10,13 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing Artifact' 
-                sh "mvn test"
+                
             }
         }
         stage('Build') {
             steps {
                 echo 'Building Artifact' 
-                sh "mvn install"
+                
             }
         }
     }
