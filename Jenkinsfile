@@ -1,12 +1,23 @@
-pipeline {
+ipeline {
     agent any 
     stages {
-        stage('Build') { 
+        stage('list envr var') {
             steps {
-                echo "Deploying Artifact" 
+                echo 'printing variables' 
+                sh "printenv |  sort"
             }
         }
-      
-       
+        stage('Test') {
+            steps {
+                echo 'Testing Artifact' 
+                sh "mvn test"
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building Artifact' 
+                sh "mvn install"
+            }
+        }
     }
-}
+}    
