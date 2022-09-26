@@ -1,4 +1,4 @@
-ipeline {
+pipeline {
     agent any 
     stages {
         stage('list envr var') {
